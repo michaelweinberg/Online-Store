@@ -11,3 +11,7 @@ add prefixes
 delete comments
 
 upload json elements to redis, mongolab, etc.
+
+minify css, js and html
+
+optimize images
