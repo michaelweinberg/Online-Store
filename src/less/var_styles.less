@@ -1,0 +1,26 @@
+/* 
+ * LESS Variables are defined with an @ character
+ * and can have different kinds of data types: 
+ *  color, string, boolean, multi-value
+ */
+
+@myColor1: navy;                            // named color value
+@myColor2: #000080;                         // hex color value
+@myStringVar: " with an appended string";   // string variable 
+@myFontSize: 24px;                          // numeric value
+@thinBorder: 4px solid @myColor1;           // multi-value variable
+@paddingVar: 15px 15px 15px 35px;           // multi-value variable
+
+h1, h2 {
+    color: @myColor1;
+}
+
+#mypara {
+    font-size: @myFontSize;
+    border: @thinBorder;
+    padding: @paddingVar;
+}
+
+#mypara:after {
+    content: @myStringVar;
+}
