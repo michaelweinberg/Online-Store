@@ -1,5 +1,6 @@
 var hapi = require("hapi");
 var server = new hapi.Server();
+var fs = require("fs");
 var handlebars = require("handlebars");
 server.connection({ port: 8000 });
 server.start();
@@ -8,24 +9,33 @@ server.start();
 
 //home page
 server.route({
-  method: "GET",
-  path: "/",
-  handler: function(req, reply) {
-    reply.view("index",{
-			title:"Home Page"
-		});
-  }
-});
-
-server.route({
-	method: "GET",
-	path: "/product",
+	method:"GET",
+	path: "/",
 	handler: function(request, reply){
-		reply.view("/product",{
-			title:"Product Page"
-		});
+		fs.readFile("books.json", "utf8", function(err,data){
+			var links =[];
+			var list = JSON.parse(data);
+			reply.view("index", {
+			title: "Books",
+			//don't re-parse the data, just pass in the objetc
+			books: list.books
+			});
+		});		
 	}
 });
+ 
+
+
+// server.route({
+	// method: "GET",
+	// path: "/product",
+	// handler: function(request, reply){
+		// reply.view("/product",{
+			// title:"Product Page",
+			// products: INSERT
+		// });
+	// }
+// });
 
 
 server.route({
@@ -43,10 +53,13 @@ server.route({
 	path: "/{index}",
 	handler:function(request, reply){
 		fs.readFile("products.json", "utf8", function(err,data){
-			var products = JSON.parse(data);
-			var item = products.makers[request.params.index];
-			reply.view("/product",{
-				loop: item
+				data = JSON.parse(data);
+				var link = request.params.index;
+				var item = data.makers[link];
+				
+			reply.view("product", {
+			title: "Hello",
+			loop: item
 			});
 		});
 	}

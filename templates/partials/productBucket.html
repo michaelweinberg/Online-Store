@@ -1,5 +1,6 @@
+{{#each products}}
 <div class="product-bucket">
-							<a href="{{@index}}">
+							<a href="products/{{@key}}">
 							<img class="bucket-image" src="{{image}}" />
 								<div class="product-info">
 									
@@ -13,3 +14,4 @@
 									</a>
 								</div>
 						</div>
+						{{/products}}
