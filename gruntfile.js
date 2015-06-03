@@ -1,10 +1,19 @@
 module.exports = function(grunt){
-	var npm = ["grunt-contrib-watch", "grunt-contrib-less"];
+	var npm = ["grunt-contrib-watch", "grunt-contrib-less","grunt-concurrent", "grunt-nodemon"];
 	npm.forEach(grunt.loadNpmTasks);
 	
-	grunt.registerTask("default", ["less","watch"]);
+	grunt.registerTask("default", ["concurrent"]);
 	
 	grunt.initConfig({
+		
+		concurrent:{
+			dev:{
+				tasks:["watch","nodemon","less"],
+				options:{
+					logConcurrentOutput:true
+				}
+			}
+		},
 	
 	
 		watch:{
@@ -12,10 +21,21 @@ module.exports = function(grunt){
 				livereload:true,
 				
 			},
+			html:{
+				files:"templates/**",
+				 options: {
+			      reload: true
+			    }
+			},
 			less:{
-				files:"assets/less/**/*.less",
+				files:"src/less/*.less",
 				tasks:["less"]
 			}
+		},
+		nodemon:{
+				dev:{
+					script:"index.js"
+				}
 		},
 		less: {
       		dev: {
