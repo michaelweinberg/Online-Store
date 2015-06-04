@@ -1,58 +1,15 @@
 <div class="bucket-container">
-						<h3>Mugs</h3>
-						<div class="product-bucket">
-							<img class="bucket-image" src="assets/images/products/mugs/images1.jpg" />
-								<div class="product-info">
-									<p class="product-title">A Mug</p>
-									<p class="product-colors"><img src="assets/images/colors/color-black.png" /><img src="assets/images/colors/color-blue.png" /><img src="assets/images/colors/color-brass.png" /></p>
-									<p class="product-price">$3.99</p>
-								</div>
-						</div>
-						<div class="product-bucket">
-							<img class="bucket-image" src="assets/images/products/mugs/images2.jpg" />
-								<div class="product-info">
-									<p class="product-title">A Mug</p>
-									<p class="product-colors"><img src="assets/images/colors/color-red.png" /><img src="assets/images/colors/color-darkgreen.png" /></p>
-									<p class="product-price">$3.99</p>
-								</div>
-						</div>
-						<div class="product-bucket">
-							<img class="bucket-image" src="assets/images/products/mugs/images3.jpg" />
-								<div class="product-info">
-									<p class="product-title">A Mug</p>
-									<p class="product-colors"><img src="assets/images/colors/color-yellow.png" /></p>
-									<p class="product-price">$3.99</p>
-								</div>
-						</div>
+						<h3>Makers</h3>
+			
+			{{#each makers}}
+			{{>productBucket}}
+			{{/each}}
+			
 					</div>
 					
 						<div class="bucket-container">
-						<h3>Coffee Makers</h3>
-						<div class="product-bucket">
-							<a href="/french-press">
-							<img class="bucket-image" src="assets/images/products/accessories/maker1.jpg" />
-								<div class="product-info">
-									
-										<p class="product-title">French Press</p>
-										<p class="product-colors"><img src="assets/images/colors/color-black.png" /><img src="assets/images/colors/color-blue.png" /><img src="assets/images/colors/color-brass.png" /></p>
-										<p class="product-price">$3.99</p>
-									</a>
-								</div>
-						</div>
-						<div class="product-bucket">
-							<img class="bucket-image" src="assets/images/products/accessories/maker2.jpg" />
-								<div class="product-info">
-									<p class="product-title">A Mug</p>
-									<p class="product-colors"><img src="assets/images/colors/color-red.png" /><img src="assets/images/colors/color-darkgreen.png" /></p>
-									<p class="product-price">$3.99</p>
-								</div>
-						</div>
-						<div class="product-bucket">
-							<img class="bucket-image" src="assets/images/products/accessories/maker3.jpg" />
-								<div class="product-info">
-									<p class="product-title">A Mug</p>
-									<p class="product-colors"><img src="assets/images/colors/color-yellow.png" /></p>
-									<p class="product-price">$3.99</p>
-								</div>
-						</div>
-					</div>
+						<h3>Mugs</h3>
+						{{#each mugs}}
+			{{>productBucket}}
+			{{/each}}
+			</div>

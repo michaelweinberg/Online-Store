@@ -12,13 +12,13 @@ server.route({
 	method:"GET",
 	path: "/",
 	handler: function(request, reply){
-		fs.readFile("books.json", "utf8", function(err,data){
-			var links =[];
+		fs.readFile("products.json", "utf8", function(err,data){		
 			var list = JSON.parse(data);
+			
 			reply.view("index", {
 			title: "Books",
-			//don't re-parse the data, just pass in the objetc
-			books: list.books
+			makers: list.makers,
+			mugs: list.mugs
 			});
 		});		
 	}
@@ -72,6 +72,7 @@ server.views({
 	},
 	layoutPath: "layouts",
 	layout: "default",
+	partialsPath: "templates/partials",
 	isCached:false
 });
 

@@ -2,7 +2,7 @@
   "makers": {
 	  	"french-press":{
 	      "title": "French Press",
-	      "copy": :"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s",
+	      "copy":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s",
 	      "image": "assets/images/products/accessories/maker1.jpg",
 	      "color": ["yellow", "blue"],
 	      "price": "7.99"
@@ -14,19 +14,28 @@
 	    	"color": ["red", "green"],
 	    	"price":"9.99"
 	    	
+	    },
+	    
+	    "basket-filter-coffee":{
+	    	"title": "Basket Filter Coffee Maker",
+	    	"copy": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+	    	"image": "assets/images/products/accessories/maker2.jpg",
+	    	"color": ["red", "green"],
+	    	"price":"9.99"
+	    	
 	    }
     },
   	"mugs": {
 		 "witty-mug":{
 		      "title": "Witty Mug",
-		       "copy": :"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
+		       "copy":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
 		       "image": "assets/images/products/mugs/images1.jpg",
 		     "color": ["red", "green"],
 		    	"price":"2.99"
 		    },
 		    "color-mug":{
 		      "title": "Color Mug",
-		       "copy": :"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
+		       "copy":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
 		       "image": "assets/images/products/mugs/images2.jpg",
 		      "color": ["red", "green","blue","yellow"],
 		    	"price":"3.99"

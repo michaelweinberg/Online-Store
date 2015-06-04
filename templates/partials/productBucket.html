@@ -1,4 +1,4 @@
-{{#each products}}
+
 <div class="product-bucket">
 							<a href="products/{{@key}}">
 							<img class="bucket-image" src="{{image}}" />
@@ -6,12 +6,11 @@
 									
 										<p class="product-title">{{title}}</p>
 										<p class="product-colors">
-											{{#color}}
-											<img src="assets/images/colors/color-{{color}}.png" />
-											{{/color}}
+											{{#each color}}
+											<img src="assets/images/colors/color-{{this}}.png" />
+											{{/each}}
 											</p>
 										<p class="product-price">{{price}}</p>
 									</a>
 								</div>
 						</div>
-						{{/products}}

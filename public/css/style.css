@@ -25,6 +25,9 @@ body {
 .bucket-image {
   width: 150px;
 }
+.product-colors {
+  height: 20px;
+}
 .product-colors img {
   width: 15px;
   margin-right: 2px;
