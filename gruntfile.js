@@ -1,5 +1,5 @@
 module.exports = function(grunt){
-	var npm = ["grunt-contrib-watch", "grunt-contrib-less","grunt-concurrent", "grunt-nodemon"];
+	var npm = ["grunt-contrib-watch", "grunt-contrib-less","grunt-concurrent", "grunt-contrib-copy", "grunt-nodemon"];
 	npm.forEach(grunt.loadNpmTasks);
 	
 	grunt.registerTask("default", ["concurrent"]);
@@ -8,11 +8,20 @@ module.exports = function(grunt){
 		
 		concurrent:{
 			dev:{
-				tasks:["watch","nodemon","less"],
+				tasks:["watch","nodemon","less","copy"],
 				options:{
 					logConcurrentOutput:true
 				}
 			}
+		},
+		
+		copy:{
+			 files: {
+			    cwd: 'src/images/',  // set working folder / root to copy
+			    src: '**',           // copy all files and subfolders
+			    dest: 'public/images/',    // destination folder
+			    expand: true           // required when using cwd
+  			}
 		},
 	
 	

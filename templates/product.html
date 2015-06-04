@@ -1,9 +1,13 @@
 {{#product}}
 <div class="product-left"><img src="{{image}}" /></div>
 				
-				<div class="product-right"><h2>{{title}}</h2>
-					<p class="copy">{{copy}}</p>
-					<p class="price">{{price}}</p>
-					<p class="colors">{{#color}}{{color}}{{/color}}</p>
+	<div class="product-right"><h2>{{title}}</h2>
+	<p class="copy">{{copy}}</p>
+	<p class="price">{{price}}</p>
+	<p class="colors">
+		{{#each color}}
+		<img src="assets/images/colors/color-{{this}}.png" />
+		{{/each}}
+		</p>
 				
-				</div>	{{/product}}
+</div>	{{/product}}

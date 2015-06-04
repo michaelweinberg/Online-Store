@@ -45,7 +45,7 @@ server.route({
 			console.log(index);
 			reply.view("product", {
 			title: "Product",
-			product: list.makers.index
+			product: list.makers[index]
 			});
 		});		
 	}
