@@ -16,7 +16,7 @@ server.route({
 			var list = JSON.parse(data);
 			
 			reply.view("index", {
-			title: "Books",
+			title: "Home",
 			makers: list.makers,
 			mugs: list.mugs
 			});
@@ -24,19 +24,6 @@ server.route({
 	}
 });
  
-
-
-// server.route({
-	// method: "GET",
-	// path: "/product",
-	// handler: function(request, reply){
-		// reply.view("/product",{
-			// title:"Product Page",
-			// products: INSERT
-		// });
-	// }
-// });
-
 
 server.route({
   method: "GET",
@@ -51,17 +38,16 @@ server.route({
 server.route({
 	method:"GET",
 	path: "/{index}",
-	handler:function(request, reply){
-		fs.readFile("products.json", "utf8", function(err,data){
-				data = JSON.parse(data);
-				var link = request.params.index;
-				var item = data.makers[link];
-				
+	handler: function(request, reply){
+		fs.readFile("products.json", "utf8", function(err,data){		
+			var list = JSON.parse(data);
+			var index = request.params.index;
+			console.log(index);
 			reply.view("product", {
-			title: "Hello",
-			loop: item
+			title: "Product",
+			product: list.makers.index
 			});
-		});
+		});		
 	}
 });
 

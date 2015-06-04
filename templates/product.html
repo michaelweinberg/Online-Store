@@ -1,8 +1,9 @@
-<div class="product-left"><img src="assets/images/products/accessories/maker1.jpg" /></div>
-				{{#loop}}
+{{#product}}
+<div class="product-left"><img src="{{image}}" /></div>
+				
 				<div class="product-right"><h2>{{title}}</h2>
 					<p class="copy">{{copy}}</p>
 					<p class="price">{{price}}</p>
 					<p class="colors">{{#color}}{{color}}{{/color}}</p>
 				
-				</div>	{{/loop}}
+				</div>	{{/product}}
