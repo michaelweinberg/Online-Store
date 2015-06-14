@@ -1,0 +1,24 @@
+<h1>Here are all your reviews</h1>
+
+<p>
+ 	Heres the reviews
+ </p>
+
+<ul>
+  {{#reviews}}
+   <div class="comment-container">
+					
+						<p><span class="stars">
+							
+							<img class="star" src="assets/images/stars/star-filled.png" />
+							
+							</span>
+							
+					<span class="comment-title">{{headline}}</span></p>
+						<p><span class="byline">by {{screename}}</span></p>
+				
+					<p class="comment-body">{{text}}</p>
+				</div>
+   	
+  {{/reviews}}
+</ul>

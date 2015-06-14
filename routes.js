@@ -7,6 +7,12 @@ module.exports = [{
 	path: "/{index}",
 	handler: require("./handlers/product")
 },  {
+  path: "/route/{id}",
+  method: "GET",
+  handler: require("./handlers/getAllReviews")
+}, 
+
+{
    method: "GET",
   path: "/assets/{param*}",
   handler: {

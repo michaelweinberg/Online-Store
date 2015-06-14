@@ -19,13 +19,13 @@ db.init(function(err){
 
 
 server.views({
-	path:"templates",
+	path:"views/templates",
 	engines:{
 		html:require("handlebars")
 	},
 	layoutPath: "layouts",
 	layout: "default",
-	partialsPath: "templates/partials",
+	partialsPath: "views/templates/partials",
 	isCached:false
 });
 
