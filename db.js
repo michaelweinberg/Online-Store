@@ -29,6 +29,15 @@ var facade = {
 				 if(ready)ready(err);
 			 });
 		});
+	authDB = new sqlite.Database("auth.db",function(){
+	//table has two columns- user and sessionID
+	authDB.run("CREATE TABLE IF NOT EXISTS auth (username, session)",
+	function(){
+		console.log("starting auth server");
+		
+	});
+});
+		
 	},
 	
 	getAllReviews: function(c){

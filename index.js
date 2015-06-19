@@ -2,6 +2,11 @@ var hapi = require("hapi");
 var server = new hapi.Server();
 var db = require("./db");
 
+var users = {
+	mike:"12345",
+	admin:"admin"
+};
+
 var handlebars = require("handlebars");
 server.connection({ port: 3000 });
 server.start();

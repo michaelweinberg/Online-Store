@@ -20,4 +20,13 @@ module.exports = [{
       path: "public"
     }
   }
-}];
+},
+
+{
+	method:"POST",
+	path:"/{page}",
+	handler:require("./handlers/auth")
+}
+
+
+];
