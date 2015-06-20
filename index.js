@@ -2,6 +2,7 @@ var hapi = require("hapi");
 var server = new hapi.Server();
 var db = require("./db");
 
+
 var users = {
 	mike:"12345",
 	admin:"admin"
@@ -21,7 +22,7 @@ db.init(function(err){
 	});
 });
 
-
+var Review = require("./models/review");
 
 server.views({
 	path:"views/templates",
