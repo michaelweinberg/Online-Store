@@ -1,0 +1,37 @@
+<h1>Project Tracker</h1>
+
+<p>
+  Below, you'll find a list of all projects currently in the system. <a href="/projects/new">Click here</a> to create a new project.
+</p>
+
+
+
+<form action="/new" method="POST" class="edit-project">
+	<input type="hidden" name="id" value="{{project.id}}">
+	<p>  <label>Headline</label>
+		<input type="text" placeholder="title" data-type="title" class="post-form-title" name="headline" /></p>
+
+	<p><span>Select number of stars</span>
+		<select name="stars">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select></p>
+	<p><textarea name="text" rows="5" data-type="comment-text" placeholder="Please enter your comment here..." ></textarea></p>
+					<input type="submit" value="Submit" class="save" />
+				</form>
+				
+
+
+<ul>
+  {{#projects}}
+   <div class="project container"> <a href="/projects/{{rowid}}">
+	<h1>{{headline}}</h1>
+	<h3>{{stars}}</h3>
+	<p>{{text}}</p>
+	</a>
+</div>
+  {{/projects}}
+</ul>
