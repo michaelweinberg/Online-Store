@@ -12,3 +12,5 @@ var PostModel = Backbone.Model.extend({
 		this.set("post",rating);
 	}
 });
+
+module.exports = PostModel;

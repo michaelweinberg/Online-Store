@@ -10,3 +10,5 @@ var PostView = Backbone.View.extend({
 		this.$el.html(html);
 	}
 });
+
+module.exports = PostView;
