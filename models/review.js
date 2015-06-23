@@ -2,8 +2,8 @@ var Backbone = require("backbone");
 var db = require("../db");
 
 var LOAD = "SELECT screename, date, headline, text, stars, product FROM reviews WHERE rowid = $id";
-var SAVE_NEW ="INSERT INTO projects (screename, date, headline, text, stars, product) VALUES ($screename, $date, $headline,$text, $stars,$product);";
-var UPDATE = "UPDATE review SET screename=$screename,date=$date,$headline=headline,text=$text,stars=$stars, product=$product WHERE rowid=$id;";
+var SAVE_NEW ="INSERT INTO reviews (screename, date, headline, text, stars, product) VALUES ($screename, $date, $headline,$text, $stars,$product);";
+var UPDATE = "UPDATE reviews SET screename=$screename,date=$date,$headline=headline,text=$text,stars=$stars, product=$product WHERE rowid=$id;";
 var LAST = "SELECT last_insert_rowid() AS rowid FROM projects;";
 
 module.exports=Backbone.Model.extend({
