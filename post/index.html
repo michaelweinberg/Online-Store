@@ -2,12 +2,21 @@
 	<head>Post</head>
 	<body>
 		
-		<div class="comments">
+		<div class="comments">	</div>
+		<script type="text/html" id="form-template">
 			<div class="comment-form">
 				<form>
 					<p><input type="text" placeholder="title" data-type="title" class="post-form-title" /></p>
-					
+					<p><span>Select number of stars</span>
+						<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select></p>
 					<p><textarea rows="5" data-type="comment-text" placeholder="Please enter your comment here..." ></textarea></p>
+					<input type="submit" value="Submit" />
 				</form>
 			</div>
 				<div class="comment-container">
@@ -17,7 +26,8 @@
 				
 					<p class="comment-body">Bushwick PBR vinyl banh mi, sartorial umami street art. Polaroid Marfa crucifix, wolf Etsy church-key migas PBR&B Helvetica ennui Tumblr 8-bit art party fixie lumbersexual. Retro umami lo-fi cred tote bag, drinking vinegar bitters put a bird on it master cleanse PBR cold-pressed. Wes Anderson quinoa Odd Future artisan skateboard pork belly, flexitarian lomo plaid four dollar toast chillwave. Mumblecore occupy banh mi, flexitarian hella yr Blue Bottle hoodie. Lumbersexual leggings butcher, flexitarian small batch tofu whatever. Lo-fi pug freegan kogi vinyl.</p>
 				</div>
-			</div>
+				</script>
+		
 		
 			<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"></script>
