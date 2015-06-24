@@ -1,4 +1,5 @@
 var fs = require("fs");
+var db = require("../db");
 
 module.exports = function(request, reply){
 		fs.readFile("products.json", "utf8", function(err,data){		
@@ -9,5 +10,12 @@ module.exports = function(request, reply){
 			makers: list.makers,
 			mugs: list.mugs
 			});
-		});		
+		});	
+		
+		  db.getAllProjects(function(err, reviews) {
+		    reply.view("index", {
+		      projects: reviews,
+		      title: "Home"
+		    });
+  });	
 };

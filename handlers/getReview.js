@@ -1,35 +1,29 @@
-//how do I set the reviews inside product page
+var Project = require("../models/project");
 
-var Review = require("../models/review.js");
-
-module.exports = function(req,reply){
-	//this won't be the same
-	var id = req.params.id;
-	var model = new Review({
-		id:id
-	});
-	
-	if(id =="new"){
-		return reply.view("review",{
-			//set screename in to user who's logged in
-			screename: "Your screename",
-		   review: model.toJSON
-		});
-	}
-	
-	model.set("id", id);
-	model.load(function(err){
-		var data;
-		if (err){
-			console.log(err);
-		}else{
-			data = model.toJSON();
-		}
-		reply.view("comment", {
-			text: data.text,
-			stars: data.stars,
-			headline:data.headline,
-			date:data.date
-		});
-	});
+module.exports = function(req, reply) {
+  var id = req.params.id;
+  var model = new Project({
+    id: id
+  });
+  //new projects don't need to load from the DB
+  if (id == "new") {
+    return reply.view("project", {
+      title: "New Project",
+      project: model.toJSON()
+    });
+  }
+  //get model details and then return the page
+  model.set("id", id);
+  model.load(function(err) {
+    var data;
+    if (err) {
+      console.log(err);
+    } else {
+      data = model.toJSON();
+    }
+    reply.view("project-view", {
+      title: data.name,
+      project: data
+    });
+  });
 };
