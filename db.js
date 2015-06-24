@@ -27,7 +27,7 @@ var facade = {
       });
     });
   },
-  getAllProjects: function(c) {
+  getAllReviews: function(c) {
     	db.all("SELECT screename, date, headline, text, stars, product, rowid FROM reviews;", c);
   }
 };

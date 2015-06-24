@@ -12,10 +12,5 @@ module.exports = function(request, reply){
 			});
 		});	
 		
-		  db.getAllProjects(function(err, reviews) {
-		    reply.view("index", {
-		      projects: reviews,
-		      title: "Home"
-		    });
-  });	
+
 };

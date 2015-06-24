@@ -1,17 +1,10 @@
-<div class="comments">
-
-				<div class="comment-container">
-					
-						<p><span class="stars">
-							
-							<img class="star" src="assets/images/stars/star-filled.png" />
-							
-							</span>
-							
-					<span class="comment-title">HEADLINE</span></p>
-						<p><span class="byline">by Me on Now</span></p>
-				
-					<p class="comment-body">this is some text</p>
-				</div>
-			</div>
-	
+<ul>
+  {{#reviews}}
+   <div class="project container"> <a href="/projects/{{rowid}}">
+	<h1>{{headline}}</h1>
+	<h3>{{stars}}</h3>
+	<p>{{text}}</p>
+	</a>
+</div>
+  {{/reviews}}
+</ul>

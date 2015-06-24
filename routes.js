@@ -4,13 +4,9 @@ module.exports = [{
 	handler: require("./handlers/home")
 }, {
   method:"GET",
-	path: "/{index}",
+	path: "/{id}",
 	handler: require("./handlers/product")
-},  {
-  path: "/route/{id}",
-  method: "GET",
-  handler: require("./handlers/getAllReviews")
-}, 
+},  
 
 {
    method: "GET",
@@ -20,12 +16,10 @@ module.exports = [{
       path: "public"
     }
   }
-},
-
-{
+}, {
 	method:"POST",
-	path:"/{page}",
-	handler:require("./handlers/auth")
+	path:"/{id}",
+	handler:require("./handlers/setReview")
 }
 
 
