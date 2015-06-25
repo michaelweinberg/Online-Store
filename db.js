@@ -28,7 +28,7 @@ var facade = {
     });
   },
   getAllReviews: function(c) {
-    	db.all("SELECT screename, date, headline, text, stars, product, rowid FROM reviews where product = $product;", c);
+    	db.all("SELECT screename, date, headline, text, stars, product, rowid FROM reviews", c);
   }
 };
 
