@@ -26,7 +26,7 @@ module.exports = function(request, reply){
 					data = model.toJSON();
 				}
 					reply.view("product",{
-						
+						reviews:reviews,
 						 review: data,
 						product: list.makers[index],
 						 title:"Product"
