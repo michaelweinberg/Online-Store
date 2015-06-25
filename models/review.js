@@ -40,7 +40,7 @@ module.exports = Backbone.Model.extend({
     var query = db.connection.prepare(q);
     var data = this.toJSON();
     data.product=data.id;
-    console.log(data);
+    console.log("In save-model ",data);
     query.run({
       		$screename:data.screename,
 			$text:data.text,
