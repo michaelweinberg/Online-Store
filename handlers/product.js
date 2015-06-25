@@ -14,9 +14,9 @@ module.exports = function(request, reply){
 			
 		db.getAllReviews(function(err, reviews) {
 			
-		console.log("product handler", model.toJSON());
-		console.log(id);
-		console.log(index);
+		// console.log("product handler", model.toJSON());
+		// console.log(id);
+		// console.log(index);
 			model.set("id",id);
 			model.load(function(err){
 				var data;
@@ -27,7 +27,7 @@ module.exports = function(request, reply){
 				}
 					reply.view("product",{
 						
-						 reviews: reviews,
+						 review: data,
 						product: list.makers[index],
 						 title:"Product"
 					});
