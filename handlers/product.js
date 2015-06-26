@@ -14,9 +14,6 @@ module.exports = function(request, reply){
 			
 		db.getAllReviews(function(err, reviews) {
 			
-		// console.log("product handler", model.toJSON());
-		// console.log(id);
-		// console.log(index);
 			model.set("id",id);
 			model.load(function(err){
 				var data;
