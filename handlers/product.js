@@ -22,13 +22,13 @@ module.exports = function(request, reply){
 				}else{
 					data = model.toJSON();
 				}
-					reply.view("product",{
-						reviews:reviews,
-						 review: data,
-						product: list.makers[index],
-						 title:"Product"
-					});
+				reply.view("product",{
+					reviews:reviews,
+					 review: data,
+					product: list.makers[index],
+					 title:"Product"
 				});
+			});
 		});	
 	});	
 };
