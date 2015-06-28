@@ -13,7 +13,6 @@ module.exports = Backbone.Model.extend({
 		text:"",
 		stars:0,
 		headline:"",
-		
 		product:"",
 		id: ""
   },
