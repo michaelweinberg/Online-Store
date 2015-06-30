@@ -1,2 +1,3 @@
-# final
-###ITC 298 Final Project
+
+###eCommerce Application Built In Node
+
