@@ -39,6 +39,13 @@
 		       "image": "assets/images/products/mugs/images2.jpg",
 		      "color": ["red", "green","blue","yellow"],
 		    	"price":"3.99"
+		    },
+		       "new-mug":{
+		      "title": "New Mug",
+		       "copy":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
+		       "image": "assets/images/products/mugs/images2.jpg",
+		      "color": ["red", "green","blue","yellow"],
+		    	"price":"3.99"
 		    }
 		}
 }
